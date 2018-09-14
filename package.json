@@ -1,0 +1,23 @@
+{
+  "name": "@immutabl3/express-async",
+  "version": "1.0.0",
+  "description": "async in express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immutabl3/express-async.git"
+  },
+  "keywords": [
+    "express",
+    "async"
+  ],
+  "author": "Immutable, LLC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/immutabl3/express-async/issues"
+  },
+  "homepage": "https://github.com/immutabl3/express-async#readme"
+}
