@@ -17,14 +17,17 @@ import expressAsync from '@immutabl3/express-async';
 const app = express();
 
 // as middleware
-app.use(expressAsync(async function(req, res, next) {
+app.use(expressAsync(async function myMiddleware(req, res, next) {
+	// await can not safely be used
 	const data = await findData();
+	// errors are caught and automatically passed to next
 	if (!data) throw new Error('missing data');
+	// as middleware, next can be called at any point
 	next();
 }));
 
 // as an endpoint
-app.get('/', expressAsync(async function(req, res) {
+app.get('/', expressAsync(async function myEndpoint(req, res) {
 	const data = await findData();
 	res.send(data);
 }));
